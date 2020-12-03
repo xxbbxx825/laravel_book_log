@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ReviewController@index');
+Route::resource('reviews', 'ReviewController')->except('index');
