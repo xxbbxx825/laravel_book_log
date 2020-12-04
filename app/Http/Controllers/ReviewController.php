@@ -25,7 +25,8 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('reviews.create');
     }
 
     /**
@@ -34,9 +35,11 @@ class ReviewController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Review $review)
     {
-
+        $review->fill($request->all());
+        $review->save();
+        return redirect('/');
     }
 
     /**
