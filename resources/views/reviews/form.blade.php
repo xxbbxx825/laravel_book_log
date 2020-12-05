@@ -10,13 +10,22 @@
 </div>
 
 <div class="form-group">
-    <input class="form-check-input" type="radio" id="status1" name="status" value="読了">
+    <input class="form-check-input" type="radio" id="status1" name="status" value="読了"
+    @if(old('status')==='読了' | $review->status === '読了')
+    checked="checked"
+    @endif>
     <label class="form-check-label" for="status1">読了</label>
 
-    <input class="form-check-input" type="radio" id="status2" name="status" value="読んでる">
-    <label class="form-check-label" for="status2">読了</label>
+    <input class="form-check-input" type="radio" id="status2" name="status" value="読んでる"
+    @if(old('status')==='読んでる'| $review->status === '読んでる')
+    checked="checked"
+    @endif>
+    <label class="form-check-label" for="status2">読んでる</label>
 
-    <input class="form-check-input" type="radio" id="status3" name="status" value="未了">
+    <input class="form-check-input" type="radio" id="status3" name="status" value="未了"
+    @if(old('status')==='未了'| $review->status === '未了')
+    checked="checked"
+    @endif>
     <label class="form-check-label" for="status3">未了</label>
 </div>
 

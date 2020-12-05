@@ -13,6 +13,8 @@
         <h1 class="h2">
             <a class="text-body text-decoration-none" href="index.php">読書ログ</a>
         </h1>
+        <a href="/">読書ログ一覧</a>
+        <a href="{{ route('reviews.create') }}">読書ログ作成</a>
     </header>
 
     <div class="container">
